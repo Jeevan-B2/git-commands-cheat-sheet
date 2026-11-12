@@ -2,6 +2,8 @@
 
 A comprehensive, beginner-to-advanced reference guide for the most essential Git commands. 
 
+> **🌍 About this Community Project:** 
+> This repository is an open-source, community-driven project. It was created to help beginners learn Git and to provide a quick reference for experienced developers. Feel free to fork this repo, add commands you find useful, and submit a Pull Request to help the community grow!
 > **📌 Note:** Text in `<angle_brackets>` should be replaced with your specific values (e.g., `<branch-name>`, `<file-name>`).
 
 ---
