@@ -155,4 +155,20 @@ Found a command that's missing?
 5. Open a **Pull Request**.
 
 ---
+
+## 🚑 Common Errors & How to Fix Them
+
+Even experienced developers run into errors. Here is a troubleshooting guide for the most common Git errors:
+
+| Error Message | Why it Happens | How to Fix It |
+| :--- | :--- | :--- |
+| `fatal: not a git repository` | You are trying to run a Git command outside of a Git-initialized folder. | Run `cd <your-project-folder>` to navigate into the correct directory, or run `git init` if you haven't started tracking the folder yet. |
+| `error: failed to push some refs to...` | Someone else pushed changes to the remote repository before you did. Your local copy is behind. | Run `git pull origin main` to download their changes and merge them, then run `git push` again. |
+| `CONFLICT (content): Merge conflict in <file>` | You and someone else edited the exact same line of code in a file. Git doesn't know which version to keep. | Open the file in your editor, look for the `<<<<<<<`, `=======`, and `>>>>>>>` markers. Choose which code to keep, delete the markers, save, and run `git add <file>` then `git commit`. |
+| `fatal: refusing to merge unrelated histories` | You are trying to merge two repositories that were created completely separately (e.g., you added a remote and a local repo with different initial commits). | Run `git pull origin main --allow-unrelated-histories`, fix any conflicts if they appear, and commit. |
+| `fatal: remote origin already exists` | You tried to link a remote URL using `git remote add origin`, but it's already linked to something else. | Run `git remote set-url origin <new-url>` to update it, or `git remote remove origin` to delete it first. |
+
+> **💡 Pro-Tip:** If you ever get stuck in a weird state (like a failed merge or rebase) and just want to start over, run `git merge --abort` or `git rebase --abort`.
+
+---
 *Created with ❤️ for the developer community.*
